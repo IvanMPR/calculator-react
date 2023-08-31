@@ -3,7 +3,7 @@ import { useState, createContext, useContext } from "react";
 const CalcContext = createContext();
 
 function CalcContextProvider({ children }) {
-  const [display, setDisplay] = useState("");
+  const [display, setDisplay] = useState("0");
   return (
     <CalcContext.Provider value={{ display, setDisplay }}>
       {children}

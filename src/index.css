@@ -1,13 +1,267 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+h1 {
+  color: #333;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* .hidden {
+  display: none;
+} */
+.container {
+  margin: auto;
+  width: 50%;
+  min-height: 50vh;
+  /* background: lightskyblue; */
+  /* display: grid;
+  place-items: center; */
+}
+.input {
+  width: 100%;
+  height: 5rem;
+  background: #333;
+  border: none;
+  padding: 1rem;
+  position: relative;
+  color: #fff;
+  font-size: 2rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  width: 100%;
+  height: 5rem;
+  color: #333;
+  font-size: large;
+  border: 1px solid #333;
+}
+
+.button:hover {
+  color: black;
+  border: 1px solid black;
+  transition: all 0.1s ease-in;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.99);
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2px;
+  row-gap: 2px;
+  place-items: center;
+}
+
+.eq {
+  grid-column-start: 1;
+  grid-column-end: 5;
+
+  width: 100%;
+}
+/* 
+.calc-body {
+  width: 30%;
+  height: 100%;
+  background: #f4f4f4;
+  border-radius: 1rem;
+  box-shadow: 1px 2px 3px 3px rgba(51, 51, 51, 0.3);
+  overflow: hidden;
+}
+
+.display {
+  width: 100%;
+  height: 30%;
+  background: #333;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.mute-btn {
+  position: absolute;
+  top: 35%;
+  left: 0%;
+}
+
+i {
+  color: #f4f4f4;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: 0.2s color;
+}
+
+i:hover {
+  color: orange;
+}
+
+.unmute-btn {
+  position: absolute;
+  top: 35%;
+  left: 0%;
+}
+
+.disp-content {
+  color: #f4f4f4;
+  background-color: #333;
+  font-size: 4rem;
+  padding: 0.5rem 1rem;
+}
+
+.digits-container {
+  width: 100%;
+  height: 80%;
+  background: #333;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2px;
+  row-gap: 2px;
+  place-items: center;
+}
+
+.digits {
+  background: #f4f4f4;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  text-align: center;
+  border: 1px solid #333;
+  display: grid;
+  place-items: center;
+}
+
+.digits:hover {
+  transform: scale(0.95);
+  color: orange;
+  transition: all 0.1s ease-in;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.eq {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: orange;
+}
+
+.eq:hover {
+  color: white;
+}
+
+@media screen and (max-width: 320px) {
+  .calc-body {
+    width: 90%;
+  }
+  .disp-content {
+    font-size: 2.5rem;
+  }
+  .digits {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 620px) {
+  .calc-body {
+    width: 80%;
+  }
+  .disp-content {
+    font-size: 3rem;
+  }
+  .digits {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 621px) and (max-width: 920px) {
+  .calc-body {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 921px) and (max-width: 1100px) {
+  .calc-body {
+    width: 45%;
+  }
+} */
+
+/*<div className="calc-body">
+        <div className="display">
+          <div className="mute-btn">
+            <i className="fas fa-volume-mute fa-2x"></i>
+          </div>
+          <div className="unmute-btn hidden">
+            <i className="fas fa-volume-up fa-2x"></i>
+          </div>
+          <p className="disp-content"></p>
+        </div>
+        <div className="digits-container">
+          <div className="digits num" id="1">
+            1
+          </div>
+          <div className="digits num" id="2">
+            2
+          </div>
+          <div className="digits num" id="3">
+            3
+          </div>
+          <div className="digits operator" id="+">
+            +
+          </div>
+          <div className="digits num" id="4">
+            4
+          </div>
+          <div className="digits num" id="5">
+            5
+          </div>
+          <div className="digits num" id="6">
+            6
+          </div>
+          <div className="digits operator" id="-">
+            -
+          </div>
+          <div className="digits num" id="7">
+            7
+          </div>
+          <div className="digits num" id="8">
+            8
+          </div>
+          <div className="digits num" id="9">
+            9
+          </div>
+          <div className="digits operator" id="*">
+            *
+          </div>
+          <div className="digits num dot" id=".">
+            .
+          </div>
+          <div className="digits num" id="0">
+            0
+          </div>
+          <div className="digits operator clear">AC</div>
+          <div className="digits operator" id="/">
+            /
+          </div>
+          <div className="digits eq">=</div>
+        </div>
+      </div> */

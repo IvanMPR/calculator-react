@@ -73,7 +73,7 @@ h1 {
 
 .eq {
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 4;
 
   width: 100%;
 }

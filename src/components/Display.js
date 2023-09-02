@@ -1,15 +1,10 @@
 import { useCalcContext } from "../contexts/CalcContext";
 
 function Display() {
-  const { display, setDisplay } = useCalcContext();
+  const { display } = useCalcContext();
 
   return (
-    <input
-      type="text"
-      className="input"
-      value={display}
-      onChange={(e) => setDisplay(e.target.value)}
-    />
+    <input type="text" className="input" value={display} readOnly={true} />
   );
 }
 

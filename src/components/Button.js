@@ -1,14 +1,12 @@
 import { useCalcContext } from "../contexts/CalcContext";
 
-function Button({ children, num, bgColor = "buttonface" }) {
-  const { display, setDisplay } = useCalcContext();
-  function handleInput(e) {
-    setDisplay(display === "0" ? "" + children : display + children);
-  }
+function Button({ children, bgColor = "buttonface" }) {
+  const { handleInput } = useCalcContext();
+
   return (
     <button
       onClick={handleInput}
-      name={num}
+      data-num={children}
       className="button"
       style={{ backgroundColor: bgColor }}
     >
